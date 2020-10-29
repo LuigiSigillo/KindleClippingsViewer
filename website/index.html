@@ -1,0 +1,43 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Inspirational Quote of the Day</title>
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="clist.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js" type="text/javascript"></script>
+	<script src="script.js"></script>
+
+</head>
+
+<body>
+	<div id="container">
+		<h2>Get Your Daily Quote</h2>
+		<div id="quoteContainer">
+			<p id="quote"></p>
+			<p id="quoteGenius"></p>
+		</div>
+		<!--end quoteContainer-->
+
+		<div id="buttonContainer">
+			<button href="#" id="quoteButton" onclick="onClick()">Quote Me</button>
+		</div>
+		<!--end buttonContainer-->
+	</div>
+	<!--end container-->
+	<br>
+
+	<div class="content-wrapper" id="lista">
+		<h2>Books</h2>
+	</div>
+
+	<div id ="downloadContainer">
+	<form method="get" action="files/citations.docx">
+		<button id="quoteButton" type="submit">Download Quotes in a Word document!</button>
+	</form>
+	</div>
+	<footer id="footer">Made with ❤️ by <a href="https://github.com/LuigiSigillo/">LuigiSigi</a></footer>
+</body>
+
+</html>

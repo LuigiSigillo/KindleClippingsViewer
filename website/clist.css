@@ -1,0 +1,53 @@
+html {
+    font-family: courier new, monospace;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  .content-wrapper {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px 30px 30px;
+    margin: 50px auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.05);
+  }
+  
+  .answer {
+    padding: 0 35px;
+  }
+  
+  details {
+    padding: 10px 0;
+  }
+  
+  details[open] {  
+    summary {
+      color: #F9276F;
+      
+      &:before {
+        content: '[-] ';
+      }
+    }
+  }
+  
+  summary {
+    cursor: pointer;
+    -webkit-user-select: none;
+    
+    &::-webkit-details-marker {
+      display: none;
+    }
+    
+    &:before {
+      content: '[+] ';
+    }
+    
+    &:hover {
+      color: #F9276F;
+    }
+    
+    &:focus {
+      outline: none;
+    }
+  }
