@@ -18,7 +18,7 @@ def alternative(path_to_clippings='website/files/My Clippings.txt'):
             if not tit:
                 titolo = line.strip("\n")
                 titolo = titolo.strip("﻿")
-                
+               
                 tit = True
                 try:
                     a = len(diz[titolo])
@@ -85,17 +85,13 @@ def write_docx(citations):
 
 c = wmi.WMI()
 
-while(True):
-    for disk in c.Win32_LogicalDisk():
-        if(disk.volumename.startswith("Kindle")):
-            letter = disk.caption
-            filepath = disk.caption+"/documents/My Clippings.txt"
-            copy2(filepath, "website/files/My Clippings.txt")
-            citations = alternative()
-            write_docx(citations)
-            flag = True     
-    if flag:
-        break
+for disk in c.Win32_LogicalDisk():
+    if(disk.volumename.startswith("Kindle")):
+        letter = disk.caption
+        filepath = disk.caption+"/documents/My Clippings.txt"
+        copy2(filepath, "website/files/My Clippings.txt")
+        citations = alternative()
+        write_docx(citations)
 
 os.system("start chrome 127.0.0.1:8000")
 os.system("python -m http.server --directory website")
